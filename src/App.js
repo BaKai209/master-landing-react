@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
 import Features from './components/features/Features';
 import Analytics from './components/Analitytics/Analytics';
+import Infrastructure from './components/Infrastructure/Infrastructure';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Hero />
       <Features/>
       <Analytics />
+      <Infrastructure />
     </div>
   );
 }

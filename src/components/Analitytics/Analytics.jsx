@@ -5,7 +5,7 @@ function Analytics(){
    const metrics =[
     {id: 1, label: "Avarege Page Load Time", value: "0.24s", status: "optimal" },
     {id: 2, label: "Core Web Vital Score", value: "99/100", status: "passed" },
-    {id: 3, label: "Client Conversion lift", value: "+34.5%", status: "Accelerating" }
+    {id: 3, label: "Client Conversion lift", value: "+34.5%", status: "Accelerating" },
    ]
 
    return (

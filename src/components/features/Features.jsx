@@ -18,7 +18,7 @@ function features() {
         {
             id: 3,
             title: "Data Operations & CRM",
-            description: "Structured relational datbase management to seamleesly filter and synchronize your customer metrics."
+            description: "Structured relational database management to seamleesly filter and synchronize your customer metrics."
         }
     ];
     
