@@ -2,6 +2,10 @@
     background-color: #0a0a0a;
     padding: 6rem 3.455rem;
     border-top: 1px solid rgba(0,240, 255, 0.05);
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .analyics-wrapper {
@@ -87,6 +91,11 @@
     gap: 0.6rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.03);
     padding-bottom: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-family: monospace;
+    font-size: 0.9rem;
 }
 
 .metric-row:last-child{

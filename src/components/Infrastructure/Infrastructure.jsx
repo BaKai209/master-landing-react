@@ -9,7 +9,6 @@ function Infrastructure() {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.project) return;
     
-    // Simulación del envío de lead de negocio
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);

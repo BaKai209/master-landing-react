@@ -5,6 +5,7 @@ import Hero from './components/Hero/Hero';
 import Features from './components/features/Features';
 import Analytics from './components/Analitytics/Analytics';
 import Infrastructure from './components/Infrastructure/Infrastructure';
+import RestaurantMenu from './components/RestauranteMenu';
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
       <Features/>
       <Analytics />
       <Infrastructure />
+      <RestaurantMenu />
+
     </div>
   );
 }

@@ -18,10 +18,12 @@
   
   .hero-title {
     color: #ffffff;
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-weight: 800;
     line-height: 1.2;
     letter-spacing: -1px;
+    margin-bottom: 20px;
+    font-weight: bold;
   }
   
   .hero-accent {
@@ -30,10 +32,10 @@
   }
   
   .hero-subtitle {
-    color: #a0a0a0;
-    font-size: 1.15rem;
-    line-height: 1.6;
-    max-width: 650px;
+    color: #888;
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 90%;
   }
   
   .hero-actions {
@@ -78,3 +80,11 @@
     transform: translateY(-2px);
   }
   
+  @media (min-width: 768px) {
+    .hero-title {
+      font-size: 3.8rem;
+    }
+    .hero-section {
+      padding: 100px 40px;
+    }
+  }

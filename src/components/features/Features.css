@@ -1,8 +1,13 @@
 .features-container {
     background-color: #0a0a0a;
-    padding: 5rem 3.455rem;
+    padding: 50px 20px;
     text-align:center;
     border-top: 1px solid rgba(0, 240,255, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    align-items: center;
 }
 
 .features-main-title{
@@ -27,10 +32,10 @@
 }
 
 .features-card {
-    background-color: #111111;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 2.5rem 2rem;
-    border-radius: 6px;
+    background-color: #111;
+    border: 1px solid #222;
+    padding: 25px 20px;;
+    border-radius: 8px;
     text-align: left;
     transition: 0.3s all ease;
     position: relative;
@@ -63,3 +68,11 @@
     font-size: 0.95rem;
     line-height: 1.6;
 }
+
+@media (min-width: 768px) {
+    .features-container {
+      flex-direction: row;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 80px 40px;
+    }
+  }  
