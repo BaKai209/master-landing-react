@@ -64,7 +64,7 @@ export default function RestaurantMenu() {
     message += `\n\n_Pedido demo generado por infraestructura Mora Tech Suite_`;
     
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/573026668432`, '_blank');
+    window.open(`https://wa.me/573026668432?text=${encodedMessage}`, '_blank');
   };
 
   // tarjeta de acceso dentro del Portafolio Principal
