@@ -1,138 +1,251 @@
-.styles-container {
-    padding: 50px 20px;
-    max-Width: 450px;
-     margin: 0 auto;
-    background-Color: #0b0b0b;
-    color: #aaa;
-}
-
-.title {
-    font-size: 1.8rem;
-    text-align: center;
-    margin-bottom: 10px;
-    color:#00e5ff;
-    font-weight: bold;
-}
-
-.subtitle{
-    font-size: 0.9rem;
-    text-align: center;
-    color: #888;
-    margin-bottom: 30px;
-    line-height: 1.4;
-}
-
-.menu-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.card {
-    display: flex;
-    justify-content: between;
-    align-items: center;
-    padding: 15px;
-    background: #141414;
-    border: 1px solid #222;
-    border-radius: 8px;
-    gap: 10px;
-}
-
-.card-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 5PX;
-}
-
-.item-name {
-    font-size: 1rem;
-    font-weight: bold;
-}
- 
-.item-desc {
-    font-size: 0.8rem;
-    color: #aaa;
-    line-height: 1.3;
-}
-
-.item-price {
-    font-size: 0.9rem;
-    color: #00e5ff;
-    font-weight: 500;
-    margin-top: 10px;
-}
-
-.counter-container {
-    display: flex;
-    align-items: left
-    ;
-    gap: 100px;
-    background: #f3f1f1;
-    padding: 5px 10px;
-    border-radius: 20px;
-    border: 1px solid #333;
-}
-
-.btn-minus{
-    background: none;
-    border: none;
-    color: #ff5252;
-    font-size: 1.2rem;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.btn-plus {
-    background: none;
-    border: none;
-    color: #00e5ff;
-    font-size: 1rem;
-    cursor: pointer;
-    font-weight: bold;
-}
+/* ==========================================
+   VISTA 1: TARJETA DEL PORTAFOLIO COMMERCIAL */
+   .portfolio-showcase-card {
+    background: #111111;
+    border: 1px solid #222222;
+    border-radius: 12px;
+    padding: 30px 24px;
+    max-width: 480px;
+    margin: 20px auto;
+    position: relative;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  }
   
-.qantity {
-    font-size: 1rem;
-    min-width: 15px;
-    text-align: center;
-}
-
-.footer-cart {
-    margin-top: 30px;
-    padding: 20px;
-    background:#141414;
+  .showcase-badge {
+    display: inline-block;
+    background: rgba(0, 229, 255, 0.1);
     border: 1px solid #00e5ff;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.total-container {
-    display: flex;
-    justify-content: space-between;
-    font-size: 1rem;
-}
-
-.totalText {
-    color: #aaa;
-}
-
-.totalAmount {
-    font: bold;
-    color: #fff;
-}
-
-.btn-submit {
+    color: #00e5ff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+  }
+  
+  .showcase-title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+  
+  .showcase-client {
+    color: #888888;
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+  }
+  
+  .highlight-text {
+    color: #ffea00;
+    font-weight: 600;
+  }
+  
+  .showcase-desc {
+    color: #aaaaaa;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 24px;
+  }
+  
+  .showcase-btn {
     width: 100%;
     padding: 14px;
     background: #00e5ff;
-    color: #000;
+    color: #000000;
     border: none;
-    border-radius: 4px;  
+    border-radius: 6px;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 0.95rem;
     cursor: pointer;
-}
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .showcase-btn:hover {
+    background: #00b8cc;
+    transform: translateY(-2px);
+  }
+  
+  /* VISTA 2: APLICACIÓN DE MENÚ DIGITAL (MÓVIL)*/
+
+  .menu-app-container {
+    background: #0b0b0b;
+    color: #ffffff;
+    padding: 24px 16px;
+    max-width: 480px;
+    margin: 0 auto;
+    border: 1px solid #1a1a1a;
+    border-radius: 16px;
+    box-sizing: border-box;
+  }
+  
+  .menu-header {
+    text-align: center;
+    margin-bottom: 24px;
+    position: relative;
+  }
+  
+  .menu-back-btn {
+    background: #222222;
+    color: #ffffff;
+    border: 1px solid #333333;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    margin-bottom: 16px;
+    transition: background 0.2s;
+  }
+  
+  .menu-back-btn:hover {
+    background: #ff5252;
+  }
+  
+  .menu-main-title {
+    color: #00e5ff;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  .menu-client-tag {
+    color: #ffea00;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .menu-instruction {
+    color: #777777;
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+  
+  .menu-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .menu-item-card {
+    display: flex;
+    align-items: center;
+    background: #141414;
+    border: 1px solid #222222;
+    border-radius: 10px;
+    padding: 12px;
+    gap: 14px;
+    position: relative;
+  }
+  
+  .menu-item-img {
+    width: 90px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+    background: #222222;
+    flex-shrink: 0;
+  }
+  
+  .menu-item-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .menu-item-name {
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .menu-item-desc {
+    color: #aaaaaa;
+    font-size: 0.75rem;
+    line-height: 1.3;
+    margin: 0;
+    padding-right: 10px;
+  }
+  
+  .menu-item-price {
+    color: #00e5ff;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  
+  /* CONTENEDOR DE BOTONES (+ / -) */
+  .menu-counter-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #1c1c1c;
+    padding: 4px 8px;
+    border-radius: 20px;
+    border: 1px solid #333333;
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+  }
+  
+  .counter-btn {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0 4px;
+  }
+  
+  .counter-btn.minus { color: #ff5252; }
+  .counter-btn.plus { color: #00e5ff; }
+  
+  .counter-qty {
+    color: #ffffff;
+    font-size: 0.85rem;
+    min-width: 14px;
+    text-align: center;
+  }
+  
+  /* BARRA DE TOTAL Y ENVÍO */
+  .menu-footer-cart {
+    margin-top: 24px;
+    padding: 16px;
+    background: #141414;
+    border: 1px solid #00e5ff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    box-shadow: 0 4px 20px rgba(0, 229, 255, 0.1);
+  }
+  
+  .footer-total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+  }
+  
+  .total-label { color: #aaaaaa; }
+  .total-value { color: #ffffff; font-weight: bold; font-size: 1.1rem; }
+  
+  .footer-submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: #00e5ff;
+    color: #000000;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .footer-submit-btn:hover {
+    background: #00b8cc;
+  }
+  
