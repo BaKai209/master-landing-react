@@ -4,24 +4,24 @@ import './RestauranteMenu.css';
 const MENU_DATA = [
   { 
     id: 1, 
-    name: "Pizza Prototipo", 
+    name: "Almuerzo Buffet Especial", 
     price: 48000, 
-    desc: "Masa madurada por 48 horas, pomodoro artesanal, mozzarella, jamón serrano premium y albahaca fresca.",
-    image: "images/pizza.png" 
+    desc: "!El verdadero recalao pero con elegancia!Un banquete con los sabores más consentidos de nuestra tierrita para que repitas hasta que el cuerpo aguante.",
+    image: "images/buffet.jpg" 
   },
   { 
     id: 2, 
-    name: "Lasagna Prototipo", 
+    name: "Combo Desayuno Criollo", 
     price: 42000, 
-    desc: "Capas de pasta artesanal con ragú de carne premium, salsa bechamel de la casa y queso gratinado al horno.",
-    image: "images/lasagna.png" 
+    desc: "Para empezar el día como Dios manda. Calentao con garra, huevitos al gusto, arepita con queso y un chocolate bien espumoso que levanta a cualquiera.",
+    image: "images/desayuno.jpg" 
   },
   { 
     id: 3, 
-    name: "Focaccia Prototipo", 
+    name: "Postre de la Casa Merengón", 
     price: 18000, 
-    desc: "Pan italiano plano horneado con aceite de oliva virgen extra, romero fresco y escamas de sal marina.",
-    image: "images/focaccia.png" 
+    desc: "Una nubecita del cielo en su paladar. Merengue crujiente, cremita suave y la fruta más fresca de la plaza. ¡Pa' chuparse los dedos!",
+    image: "images/postre.jpg" 
   }
 ];
 
