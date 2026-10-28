@@ -6,6 +6,7 @@ import Features from './components/features/Features';
 import Analytics from './components/Analitytics/Analytics';
 import Infrastructure from './components/Infrastructure/Infrastructure';
 import RestaurantMenu from './components/RestauranteMenu';
+import BookingModule from './components/BookingModule';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Analytics />
       <Infrastructure />
       <RestaurantMenu />
+      <BookingModule />
 
     </div>
   );

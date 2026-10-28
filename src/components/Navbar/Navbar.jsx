@@ -6,7 +6,7 @@ function Navbar() {
     <nav className="navbar">
       {/* 1. Logotipo de la Suite */}
       <div className="navbar-logo">
-        JOHAN MORA <span className="logo-accent">| TECH SUITE</span>
+         MORA <span className="logo-accent">| TECH SUITE</span>
       </div>
 
       {/* 2. Enlaces de Navegación de la Landing */}
