@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-export  function BookingModule() {
+export default function BookingModule() {
   const [formData, setFormData] = useState({
     leadName: '',
     companyName: '',
@@ -10,6 +10,22 @@ export  function BookingModule() {
     dietaryNotes: ''
   });
 
+  // 📱 Estado para simular la Media Query en JavaScript
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      // Activa el modo móvil si la pantalla es menor a 480px
+      setIsMobile(window.innerWidth <= 480);
+    };
+    
+    // Ejecutar al cargar la página
+    handleResize();
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -18,16 +34,14 @@ export  function BookingModule() {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Ingeniería del enlace de WhatsApp: Formatea los datos con asteriscos para que lleguen en negrita
     const message = `*NUEVA RESERVA CORPORATIVA*%0A%0A` +
-      ` *Nombre:* ${formData.leadName}%0A` +
-      ` *Empresa:* ${formData.companyName}%0A` +
-      ` *Fecha:* ${formData.resDate}%0A` +
-      ` *Hora:* ${formData.resTime}%0A` +
-      ` *Asistentes:* ${formData.paxCount} personas%0A` +
-      ` *Menú/Notas:* ${formData.dietaryNotes}`;
+      `👤 *Nombre:* ${formData.leadName}%0A` +
+      `🏢 *Empresa:* ${formData.companyName}%0A` +
+      `📅 *Fecha:* ${formData.resDate}%0A` +
+      `⏰ *Hora:* ${formData.resTime}%0A` +
+      `👥 *Asistentes:* ${formData.paxCount} personas%0A` +
+      `🍽️ *Menú/Notas:* ${formData.dietaryNotes}`;
 
-    // Línea de atención de Mora Tech Suite o la caja del restaurante
     const phoneNumber = "573026668432"; 
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
@@ -36,16 +50,17 @@ export  function BookingModule() {
   const styles = {
     container: {
       width: '100%',
-      maxWidth: '440px',
+      // Usa el estado isMobile para cambiar propiedades dinámicamente (Media Query)
+      maxWidth: isMobile ? '100%' : '440px',
       background: 'rgba(255, 255, 255, 0.2)',
-      borderRadius: '16px',
+      borderRadius: isMobile ? '0px' : '16px', // Sin bordes redondeados en pantallas completas de celular
       boxShadow: '0 8px 24px #00f0ff',
       overflow: 'hidden',
       display: 'flex',
       flexDirection: 'column',
       fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-      margin: '100px 33rem',
-      borderTop: '1px solid #00f0ff',
+      margin: isMobile ? '0px' : '100px 33rem',
+      borderTop: '1px solid #00f0ff'
     },
     header: {
       background: '#0a0a0a',
@@ -73,10 +88,10 @@ export  function BookingModule() {
     headerSub: {
       fontSize: '12px',
       opacity: 0.85,
-      display: 'block',
+      display: 'block'
     },
     chatBody: {
-      padding: '20px',
+      padding: isMobile ? '12px' : '20px', // Menos padding en móviles para ahorrar espacio
       display: 'flex',
       flexDirection: 'column',
       gap: '16px'
@@ -86,18 +101,18 @@ export  function BookingModule() {
       alignSelf: 'flex-start',
       maxWidth: '85%',
       padding: '12px 16px',
-      borderRadius: '12px 0 12px 12px',
+      borderRadius: '12px 12px 12px 0px',
       fontSize: '14px',
       lineHeight: '1.4',
       boxShadow: '0 1px 2px #00f0ff',
-      color: ' #ffffff'
+      color: '#ffffff'
     },
     bubbleForm: {
       backgroundColor: '#0a0a0a',
       alignSelf: 'flex-start',
       width: '92%',
       padding: '16px',
-      borderRadius: '0 12px 12px 12px',
+      borderRadius: '0px 12px 12px 12px',
       boxShadow: '0 1px 2px #00f0ff'
     },
     form: {
@@ -111,11 +126,11 @@ export  function BookingModule() {
       gap: '4px'
     },
     label: {
-        fontSize: '11px',
-        fontWeight: '700',
-        color: '#b3b3b3', 
-        textTransform: 'uppercase',
-        letterSpacing: '0.7px' 
+      fontSize: '11px',
+      fontWeight: '700',
+      color: '#b3b3b3',
+      textTransform: 'uppercase',
+      letterSpacing: '0.7px'
     },
     input: {
       width: '100%',
@@ -126,7 +141,8 @@ export  function BookingModule() {
       fontSize: '14px',
       backgroundColor: '#fafafa',
       outline: 'none',
-      transition: 'border-color 0.2s'
+      transition: 'border-color 0.2s',
+      color: '#333333'
     },
     btnSubmit: {
       backgroundColor: '#00f0ff',
@@ -142,7 +158,6 @@ export  function BookingModule() {
       boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
     },
     footer: {
-      background: '#0a0a0a',
       padding: '12px',
       textAlign: 'center',
       fontSize: '11px',
@@ -210,7 +225,7 @@ export  function BookingModule() {
               <label style={styles.label}>Hora de Llegada</label>
               <input 
                 type="time" 
-                name="resTime" 
+                name="resTime"
                 value={formData.resTime} 
                 onChange={handleChange} 
                 style={styles.input} 
@@ -256,10 +271,8 @@ export  function BookingModule() {
       </div>
 
       <div style={styles.footer}>
-        🔒 Infraestructura unificada - Mora Tech Suite
+        Infraestructura unificada - Mora Tech Suite
       </div>
     </div>
   );
 }
-
-export default BookingModule;
