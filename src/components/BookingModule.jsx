@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function BookingModule() {
+export  function BookingModule() {
   const [formData, setFormData] = useState({
     leadName: '',
     companyName: '',
@@ -261,3 +261,5 @@ export default function BookingModule() {
     </div>
   );
 }
+
+export default BookingModule;
