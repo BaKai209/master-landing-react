@@ -5,8 +5,6 @@ import Hero from './components/Hero/Hero';
 import Features from './components/features/Features';
 import Analytics from './components/Analitytics/Analytics';
 import Infrastructure from './components/Infrastructure/Infrastructure';
-import RestaurantMenu from './components/RestauranteMenu';
-import BookingModule from './components/BookingModule';
 import PreCalificadorEstetico from './components/PrecalificadorEstetico';
 
 function App() {
@@ -17,8 +15,6 @@ function App() {
       <Features/>
       <Analytics />
       <Infrastructure />
-      <RestaurantMenu />
-      <BookingModule />
       <PreCalificadorEstetico />
 
     </div>
