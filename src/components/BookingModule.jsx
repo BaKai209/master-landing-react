@@ -50,7 +50,6 @@ export default function BookingModule() {
   const styles = {
     container: {
       width: '100%',
-      // Usa el estado isMobile para cambiar propiedades dinámicamente (Media Query)
       maxWidth: isMobile ? '100%' : '440px',
       background: 'rgba(255, 255, 255, 0.2)',
       borderRadius: isMobile ? '0px' : '16px', // Sin bordes redondeados en pantallas completas de celular

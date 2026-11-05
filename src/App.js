@@ -7,6 +7,7 @@ import Analytics from './components/Analitytics/Analytics';
 import Infrastructure from './components/Infrastructure/Infrastructure';
 import RestaurantMenu from './components/RestauranteMenu';
 import BookingModule from './components/BookingModule';
+import PreCalificadorEstetico from './components/PrecalificadorEstetico';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Infrastructure />
       <RestaurantMenu />
       <BookingModule />
+      <PreCalificadorEstetico />
 
     </div>
   );
