@@ -9,6 +9,7 @@ export default function PreCalificadorEstetico() {
     prioridad: ''
   });
 
+  // 🎯 Variables Clínicas Optimizadas: Medicina Estética + Control de Peso Avanzado
   const tratamientos_por_zona = {
     facial: [
       { id: 'acne', nombre: 'Tratamiento Avanzado de Acné y Cicatrices' },
@@ -19,6 +20,11 @@ export default function PreCalificadorEstetico() {
       { id: 'moldeamiento', nombre: 'Moldeamiento Láser Avanzado' },
       { id: 'celulitis', nombre: 'Tratamiento de Celulitis (Enzimas)' },
       { id: 'tensado', nombre: 'Tensado Cutáneo (Radiofrecuencia)' }
+    ],
+    peso: [
+      { id: 'adelgazamiento', nombre: 'Programa Médico de Adelgazamiento (Metco)' },
+      { id: 'metabolico', nombre: 'Optimización Metabólica y Nutrición' },
+      { id: 'sueroterapia', nombre: 'Sueroterapia de Desintoxicación y Control de Peso' }
     ]
   };
 
@@ -26,10 +32,11 @@ export default function PreCalificadorEstetico() {
   const handleBack = () => setStep((prev) => prev - 1);
 
   const enviarAWhatsApp = () => {
+    // Número simulado de la administración de la clínica
     const telefonoClinica = '573026668432'; 
     const mensaje = `Hola, quiero confirmar mi prioridad de agenda.\n\n` +
       `*Paciente:* ${userData.nombre}\n` +
-      `*Enfoque:* ${userData.zona.toUpperCase()}\n` +
+      `*Enfoque Clínico:* ${userData.zona.toUpperCase()}\n` +
       `*Tratamiento de Interés:* ${userData.tratamiento}\n` +
       `*Urgencia:* ${userData.prioridad}\n\n` +
       `_Enviado desde el Módulo de Pre-calificación Express de Mora Tech Suite_`;
@@ -38,7 +45,7 @@ export default function PreCalificadorEstetico() {
     window.open(url, '_blank');
   };
 
-  // 🎨 Diccionario de Estilos Inline (CSS Puro en JS)
+  
   const styles = {
     container: {
       maxWidth: '440px',
@@ -191,17 +198,21 @@ export default function PreCalificadorEstetico() {
         </div>
       )}
 
-      {/* Paso 2: Zona */}
+      {/* Paso 2: Enfoque Clínico */}
       {step === 2 && (
         <div>
-          <p style={styles.label}>¿Cuál es tu principal zona de interés?</p>
+          <p style={styles.label}>¿Cuál es tu principal objetivo clínico?</p>
+          <button onClick={() => { setUserData({ ...userData, zona: 'peso', tratamiento: '' }); handleNext(); }} style={styles.btnOption(userData.zona === 'peso')}>
+            <strong style={{ display: 'block', color: '#ffffff', fontSize: '15px' }}>⚖️ Control de Peso y Nutrición</strong>
+            <span style={{ fontSize: '13px', color: '#a1a1aa' }}>Adelgazamiento médico, sueroterapia metabólica.</span>
+          </button>
           <button onClick={() => { setUserData({ ...userData, zona: 'facial', tratamiento: '' }); handleNext(); }} style={styles.btnOption(userData.zona === 'facial')}>
-            <strong style={{ display: 'block', color: '#ffffff', fontSize: '15px' }}>✨ Rostro y Cuello</strong>
-            <span style={{ fontSize: '13px', color: '#a1a1aa' }}>Acné, Botox, Rejuvenecimiento Láser.</span>
+            <strong style={{ display: 'block', color: '#ffffff', fontSize: '15px' }}>✨ Estética Facial</strong>
+            <span style={{ fontSize: '13px', color: '#a1a1aa' }}>Botox, cicatrices de acné, armonización facial.</span>
           </button>
           <button onClick={() => { setUserData({ ...userData, zona: 'corporal', tratamiento: '' }); handleNext(); }} style={styles.btnOption(userData.zona === 'corporal')}>
             <strong style={{ display: 'block', color: '#ffffff', fontSize: '15px' }}>🧍 Contorno Corporal</strong>
-            <span style={{ fontSize: '13px', color: '#a1a1aa' }}>Moldeamiento, Celulitis, Flacidez Avanzada.</span>
+            <span style={{ fontSize: '13px', color: '#a1a1aa' }}>Moldeamiento láser, flacidez avanzada.</span>
           </button>
           <button onClick={handleBack} style={styles.btnBack}>← Volver</button>
         </div>
