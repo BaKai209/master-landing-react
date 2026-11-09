@@ -31,19 +31,23 @@ export default function PreCalificadorEstetico() {
   const handleNext = () => setStep((prev) => prev + 1);
   const handleBack = () => setStep((prev) => prev - 1);
 
-  const enviarAWhatsApp = () => {
+   const enviarAWhatsApp = () => {
     // Número simulado de la administración de la clínica
-    const telefonoClinica = '573026668432'; 
+    const telefonoClinica = '573026668432';
+    
     const mensaje = `Hola, quiero confirmar mi prioridad de agenda.\n\n` +
       `*Paciente:* ${userData.nombre}\n` +
       `*Enfoque Clínico:* ${userData.zona.toUpperCase()}\n` +
       `*Tratamiento de Interés:* ${userData.tratamiento}\n` +
       `*Urgencia:* ${userData.prioridad}\n\n` +
       `_Enviado desde el Módulo de Pre-calificación Express de Mora Tech Suite_`;
-    
+
     const url = `https://wa.me/${telefonoClinica}?text=${encodeURIComponent(mensaje)}`;
-    window.open(url, '_blank');
+    
+    // 🔥 OPTIMIZACIÓN 0.1%: Redirección en la misma pestaña para evadir bloqueadores de pop-ups en móvil
+    window.location.href = url;
   };
+
 
   
   const styles = {
