@@ -7,6 +7,7 @@ import Analytics from './components/Analitytics/Analytics';
 import Infrastructure from './components/Infrastructure/Infrastructure';
 import PreCalificadorEstetico from './components/PrecalificadorEstetico';
 import CotizadorShowNa from './components/CotizadorExclusive';
+import {Analytics as VercelAnalytics} from '@vercel/analytics/react';
 
 function App() {
   return (
@@ -17,7 +18,10 @@ function App() {
       <Analytics />
       <Infrastructure />
       <PreCalificadorEstetico />
-      <CotizadorShowNa />      
+      {/*<CotizadorShowNa />*/}   
+
+
+       <VercelAnalytics />
 
     </div>
   );
