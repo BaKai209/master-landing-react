@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function PreCalificadorEstetico() {
+  const [nombreClinica, SetNombreClinica] = useState('Mora Tech Suite');
   const [step, setStep] = useState(1);
   const [userData, setUserData] = useState({
     nombre: '',
@@ -8,6 +9,14 @@ export default function PreCalificadorEstetico() {
     tratamiento: '',
     prioridad: ''
   });
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const clinicaParam = params.get('clinica');
+    if (clinicaParam) {
+      SetNombreClinica(clinicaParam.toUpperCase());
+    }
+  }, []);
 
   // 🎯 Variables Clínicas Optimizadas: Medicina Estética + Control de Peso Avanzado
   const tratamientos_por_zona = {
@@ -175,14 +184,14 @@ export default function PreCalificadorEstetico() {
   };
 
   return (
+
     <div style={styles.container}>
       {/* Header */}
       <div style={styles.header}>
         <div style={styles.topRow}>
-          <span style={styles.brand}>Mora Tech Suite</span>
+          <span style={styles.brand}>{nombreClinica}</span>
           <span style={styles.stepText}>Paso {step} de 4</span>
         </div>
-        <h2 style={styles.title}>Pre-calificador Clínico Express</h2>
       </div>
 
       {/* Paso 1: Nombre */}
