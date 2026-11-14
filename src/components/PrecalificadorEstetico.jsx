@@ -261,6 +261,48 @@ export default function PreCalificadorEstetico() {
           <button onClick={handleBack} style={styles.btnBack}>← Volver</button>
         </div>
       )}
+      
+            {/* Botón de Captura Ejecutiva B2B (Siempre visible en el pie de la tarjeta) */}
+      <div style={{
+        marginTop: '24px',
+        paddingTop: '16px',
+        borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+        textAlign: 'center'
+      }}>
+        <p style={{
+          color: '#9ca3af',
+          fontSize: '11px',
+          marginBottom: '8px',
+          letterSpacing: '0.5px'
+        }}>
+          ¿Eres del equipo directivo o marketing de <strong>{nombreClinica}</strong>?
+        </p>
+        <a
+                    href={`https://wa.me/${573026668432}?text=${encodeURIComponent(
+            `Hola Ing. Johan Mora, probamos la simulación personalizada para ${nombreClinica} y queremos activar este módulo en nuestra clínica.`
+          )}`}
+
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: 'inline-block',
+            width: '100%',
+            padding: '10px 14px',
+            backgroundColor: 'rgba(168, 85, 247, 0.15)',
+            border: '1px solid #a855f7',
+            borderRadius: '8px',
+            color: '#e9d5ff',
+            fontSize: '12px',
+            fontWeight: 'bold',
+            textDecoration: 'none',
+            cursor: 'pointer',
+            boxSizing: 'border-box'
+          }}
+        >
+          ⚡ Activa este módulo en {nombreClinica}
+        </a>
+      </div>
+      
     </div>
   );
 }
