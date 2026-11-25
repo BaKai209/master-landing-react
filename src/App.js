@@ -11,19 +11,29 @@ import {Analytics as VercelAnalytics} from '@vercel/analytics/react';
 import DrivingSchoolModule from './components/DrivingSchoolModule';
 
 function App() {
+
+  // Detecta Si el enlace Viene con ?escuela=
+  const isDrivingSchool = new URLSearchParams(window.location.search).has('escuela');
+
+
   return (
     <div className="App">
+      
+      
+      {isDrivingSchool ? (<DrivingSchoolModule/>
+      ) : (<>
       <Navbar />
       <Hero />
       <Features/>
       <Analytics />
       <Infrastructure />
       <PreCalificadorEstetico />
-      {/*<CotizadorShowNa />*/}   
       <DrivingSchoolModule />
+      </>)}
+      {/*<CotizadorShowNa />*/}   
 
-       <VercelAnalytics />
 
+      <VercelAnalytics />
     </div>
   );
 }
