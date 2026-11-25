@@ -104,7 +104,7 @@ export default function DrivingSchoolModule() {
             <div className="cea-divider" />
             <p className="cea-owner-text">¿Eres dueño o director de esta escuela de conducción?</p>
             <a
-              href={`https://wa.me/${targetWa}?text=${encodeURIComponent(
+              href={`https://wa.me/573026668432?text=${encodeURIComponent(
                 `Hola Ing. Johan, quiero activar el Piloto Gratis de 7 Días para ${schoolName}.`
               )}`}
               target="_blank"
